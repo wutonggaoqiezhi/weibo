@@ -12,8 +12,7 @@ class SessionsController extends Controller
         return view('sessions.create');
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $credentials = $this->validate($request, [
             'email' => 'required|email|max:255',
             'password' => 'required'
@@ -30,6 +29,5 @@ class SessionsController extends Controller
         }
 
         return;
-    }
     }
 }
